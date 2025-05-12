@@ -1,25 +1,26 @@
-package com.example.app;
+import java.sql.Timestamp;
 
 public class Notice {
+    private int id;
     private String title;
     private String content;
-    private String date;
+    private String category;
+    private Timestamp createdAt;
 
-    public Notice(String title, String content, String date) {
+    public Notice(String title, String content, String category) {
         this.title = title;
         this.content = content;
-        this.date = date;
+        this.category = category;
     }
 
-    public String getTitle() {
-        return title;
-    }
+    // Getters & Setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    public String getContent() {
-        return content;
-    }
+    public String getTitle() { return title; }
+    public String getContent() { return content; }
+    public String getCategory() { return category; }
 
-    public String getDate() {
-        return date;
-    }
+    public Timestamp getCreatedAt() { return createdAt; }
+    public void setCreatedAt(Timestamp createdAt) { this.createdAt = createdAt; }
 }
